@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(241, 253, 255);
+}
+
+.header {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.track-container {
+    margin: 5rem auto 2rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5rem;
+}
+
+.sound-name {
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.mute {
+    width: 2rem;
+    height: 2rem;
+    padding: .5rem;
+    border-radius: .2rem;
+    background-color: rgb(88, 88, 88);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mute.active {
+    background-color: rgb(158, 158, 158);
+}
+
+.select {
+    width: 150px;
+    padding: 1rem .4rem;
+    border: 1px solid rgb(211, 210, 210);
+    cursor: pointer;
+}
+
+.pads {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.pad {
+    width: 4.5rem;
+    height: 4.5rem;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.kick-pad {
+    background-color: rgb(172, 245, 255);
+}
+
+.kick-pad.active {
+    background-color: rgb(69, 230, 252);
+}
+
+.snare-pad {
+    background-color: rgb(255, 146, 146);
+}
+
+.snare-pad.active {
+    background-color: rgb(255, 73, 73);
+}
+
+.hihat-pad {
+    background-color: rgb(255, 198, 255);
+}
+
+.hihat-pad.active {
+    background-color: rgb(253, 70, 253);
+}
+
+.play {
+    margin: 2rem 0;
+    padding: .5rem 1rem;
+    background-color: #fff;
+    border: 1px solid rgb(211, 210, 210);
+    cursor: pointer;
+}
+
+.range {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.range-input {
+    margin: 1rem 0;
+    appearance: none;
+    width: 30rem;
+    height: .5rem;
+    background-color: rgb(211, 210, 210);
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.range-input:focus {
+    outline: none;
+}
+
+.range-input::-webkit-slider-thumb {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(88, 88, 88);
+    border-radius: .5rem;
+}
+
+@keyframes padAnim {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
