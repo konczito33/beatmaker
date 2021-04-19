@@ -11,6 +11,7 @@ body {
 }
 
 .container {
+    overflow-x: hidden;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -34,7 +35,7 @@ body {
 
 .track-container {
     margin: 5rem auto 2rem;
-    width: 80%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -156,5 +157,45 @@ body {
 
     to {
         transform: scale(1.2);
+    }
+}
+
+@media (max-width: 1400px){
+    .track-container{
+        flex-direction: column;
+    }
+    .pads{
+        width: 70%;
+    }
+
+    .controls{
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .pads{
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px){
+    .pad{
+        width: 2rem;
+        height: 2rem;
+    }
+    .range-input{
+        width: 300px;
+    }
+    .range{
+        margin-bottom: 1rem;
+    }
+
+    .controls{
+        width: 100%;
+    }
+
+    .sound-name{
+        font-size: 1rem;
     }
 }
